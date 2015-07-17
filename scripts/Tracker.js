@@ -19,10 +19,6 @@ function getViewer()
  return username;
 }
 
-var un = getViewer()
-
-document.getElementById("user").innerHTML = "yo " + un +  " just click on the buttons";
-
 
 function _getcbviewer()
 {
@@ -55,3 +51,12 @@ function _getcookie(c_name)
   }
  }
 }
+
+ if (un == null || un == undefined)
+ {
+  un = "_anon";
+ }
+ 
+ var un = getViewer()
+
+document.getElementById("user").innerHTML = "yo " + un +  " just click on the buttons";
