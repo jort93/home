@@ -19,6 +19,6 @@ function getViewer()
  return username;
 }
 
-var un = getViewer();
+var un = getViewer()
 
 document.getElementById("user").innerHTML = un;
