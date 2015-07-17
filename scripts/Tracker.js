@@ -21,7 +21,7 @@ function getViewer()
 
 var un = getViewer()
 
-document.getElementById("user").innerHTML = un;
+document.getElementById("user").innerHTML = "yo" + un + "just click on the buttons";
 
 
 function _getcbviewer()
