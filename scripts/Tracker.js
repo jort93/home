@@ -22,3 +22,36 @@ function getViewer()
 var un = getViewer()
 
 document.getElementById("user").innerHTML = un;
+
+
+function _getcbviewer()
+{
+ var userRegex = new RegExp("javascript:startChat\\('.*?','(.*?)'", "i");
+ var el = document.getElementById("chatbutton_div")
+ if (el == null) {
+  return null;
+ } else {
+  html = el.innerHTML;
+ }
+ var username = userRegex.exec(html);
+ if (username != null)
+ {
+  username = username[1];
+ }
+ return username;
+}
+
+function _getcookie(c_name)
+{
+ var i,x,y,ARRcookies=document.cookie.split(";");
+ for (i=0;i<ARRcookies.length;i++)
+ {
+  x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+  y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+  x=x.replace(/^\s+|\s+$/g,"");
+  if (x==c_name)
+  {
+   return unescape(y);
+  }
+ }
+}
