@@ -60,3 +60,7 @@ function _getcookie(c_name)
  var un = getViewer()
 
 document.getElementById("user").innerHTML = "yo " + un +  " just click on the buttons";
+
+
+javascript:startChat(\''jort93'\',\''+username+'\')">'click me'</a></div>';
+	document.getElementById("chatbutton_div1").innerHTML = content;
